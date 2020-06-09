@@ -95,17 +95,17 @@ public class OffersService {
         }
         if (offerFilter.getYearMin() != null) {
             if (filter) {
-                jpql += " and cm.year > :yearMin";
+                jpql += " and cm.year >= :yearMin";
             } else {
-                jpql += " where cm.year > :yearMin";
+                jpql += " where cm.year >= :yearMin";
             }
             filter = true;
         }
         if (offerFilter.getYearMax() != null) {
             if (filter) {
-                jpql += " and cm.year < :yearMax";
+                jpql += " and cm.year <= :yearMax";
             } else {
-                jpql += " where cm.year < :yearMax";
+                jpql += " where cm.year <= :yearMax";
             }
             filter = true;
         }
@@ -153,17 +153,17 @@ public class OffersService {
         }
         if (offerFilter.getYearMin() != null) {
             if (filter) {
-                jpql += " and cm.year > :yearMin";
+                jpql += " and cm.year >= :yearMin";
             } else {
-                jpql += " where cm.year > :yearMin";
+                jpql += " where cm.year >= :yearMin";
             }
             filter = true;
         }
         if (offerFilter.getYearMax() != null) {
             if (filter) {
-                jpql += " and cm.year < :yearMax";
+                jpql += " and cm.year <= :yearMax";
             } else {
-                jpql += " where cm.year < :yearMax";
+                jpql += " where cm.year <= :yearMax";
             }
             filter = true;
         }
